@@ -60,12 +60,12 @@ export const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
 
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent side="right" className="w-full sm:w-96 p-0" aria-describedby="cart-description">
+      <SheetContent side="right" className="w-full sm:w-96 p-0 bg-[#050505] border-l border-white/10" aria-describedby="cart-description">
         <div className="flex flex-col h-full">
-          <SheetHeader className="p-6 border-b">
-            <SheetTitle className="flex items-center gap-2">
+          <SheetHeader className="p-6 border-b border-white/10">
+            <SheetTitle className="flex items-center gap-2 font-syne text-white">
               Shopping Cart
-              <Link to="/carrito" onClick={onClose} className="hover:opacity-70 transition-opacity">
+              <Link to="/carrito" onClick={onClose} className="hover:text-primary transition-colors">
                 <ExternalLink className="h-4 w-4" />
               </Link>
             </SheetTitle>
@@ -77,13 +77,13 @@ export const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
           {state.items.length === 0 ? (
             <div className="flex-1 flex items-center justify-center p-6">
               <div className="text-center">
-                <h3 className="text-lg font-medium text-foreground mb-2">
+                <h3 className="text-lg font-syne font-bold text-white mb-2">
                   Your cart is empty
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground font-space-mono text-sm mb-4">
                   Add some products to start your purchase
                 </p>
-                <Button onClick={onClose} variant="outline">
+                <Button onClick={onClose} variant="outline" className="border-primary text-primary hover:bg-primary/10">
                   Continue Shopping
                 </Button>
               </div>
@@ -160,16 +160,16 @@ export const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
               </div>
 
               {/* Order Summary */}
-              <div className="border-t p-6">
+              <div className="border-t border-white/10 p-6">
                 <div className="space-y-3">
-                  <div className="flex justify-between font-semibold text-lg">
-                    <span>Total</span>
-                    <span>${finalTotal.toFixed(2)}</span>
+                  <div className="flex justify-between font-syne font-bold text-xl">
+                    <span className="text-white">Total</span>
+                    <span className="text-primary">${finalTotal.toFixed(2)}</span>
                   </div>
                 </div>
 
                 <Button 
-                  className="w-full mt-4" 
+                  className="w-full mt-4 bg-primary hover:bg-primary/90 text-black font-space-mono font-bold uppercase tracking-widest py-6" 
                   size="lg" 
                   onClick={handleCreateCheckout} 
                   disabled={isCreatingOrder}

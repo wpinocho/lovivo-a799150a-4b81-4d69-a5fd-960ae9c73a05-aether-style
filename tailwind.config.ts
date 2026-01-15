@@ -34,6 +34,8 @@ export default {
 				'roboto': ['Roboto', 'sans-serif'],
 				'space-grotesk': ['"Space Grotesk"', 'sans-serif'],
 				'work-sans': ['"Work Sans"', 'sans-serif'],
+				'space-mono': ['"Space Mono"', 'monospace'],
+				'syne': ['Syne', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
