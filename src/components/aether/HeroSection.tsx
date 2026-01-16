@@ -74,7 +74,7 @@ export const HeroSection = () => {
           <h1 className="font-syne font-bold text-7xl md:text-9xl lg:text-[12rem] leading-none tracking-tighter">
             <span style={{ fontSize: '95px' }} className="block text-white">THE</span>
             <span style={{ fontSize: '96px' }} className="block neon-cyan">FUTURE</span>
-            <span style={{ fontSize: '90px' }} className="block text-white">IS FLUID</span>
+            <span style={{ fontSize: '92px' }} className="block text-white">IS FLUID</span>
           </h1>
 
           {/* Subtitle */}
